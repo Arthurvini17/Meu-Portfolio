@@ -1,13 +1,13 @@
 import Header from "./components/Header";
 import "./globals.css";
-import { Roboto, Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 
 
 
-const roboto = Roboto({
-  weight: ["400", "500", "600"],
-  subsets: ["latin"],
-});
+// const roboto = Roboto({
+//   weight: ["400", "500", "600"],
+//   subsets: ["latin"],
+// });
 
 const inter = Inter({
   weight: ["400", "500", "600"],
