@@ -7,7 +7,7 @@ module.exports = {
         },
     },
     content: [
-        './app/**/*.{js,ts,jsx,tsx}', // Certifique-se de que isso está configurado corretamente
+        './app/**/*.{js,ts,jsx,tsx}',
         './components/**/*.{js,ts,jsx,tsx}',
         './pages/**/*.{js,ts,jsx,tsx}',
     ],

@@ -1,8 +1,29 @@
-@import "tailwindcss";
+ @import "tailwindcss";
 
 
+ @theme {
+   /* Cores principais */
+   --color-bg-primary: #0B0F1A; /* Cor de fundo global */
+   --color-bg-secondary: #121826; /* Cards, seções, containers internos */
+   --color-border-light: #1F2937; /* Linha / borda sutil */
+ 
+   /* Tipografia */
+   --color-text-primary: #F2F9FC; /* Texto principal (Títulos e parágrafos) */
+   --color-text-secondary: #B0B0B0; /* Texto secundário (Subtítulos, descrições) */
+   --color-text-highlight: #3BA9F4; /* Texto com destaque azul (Nomes, links, palavras-chave) */
+ }
 
 html, body {
-  background-color: #030303;
+  background-color: #0B0F1A;
 
-}
+} 
+
+/* Elemento | HEX | Uso sugerido
+Fundo principal | #0B0F1A | Cor de fundo global
+Fundo secundário (cards etc) | #121826 | Cards, seções, containers internos
+Linha / borda sutil | #1F2937 | Divisores sutis */
+
+/* Tipo	HEX	Uso sugerido
+Texto principal	#F2F9FC	Títulos e parágrafos
+Texto secundário	#B0B0B0	Subtítulos, descrições
+Texto com destaque azul	#3BA9F4	Nomes, links, palavras-chave */ 
