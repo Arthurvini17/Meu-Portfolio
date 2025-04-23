@@ -1,7 +1,12 @@
-import type { NextConfig } from "next";
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  // Before
+  experimental: {
+    bundlePagesExternals: true,
+  },
 
-const nextConfig: NextConfig = {
-  /* config options here */
-};
+  // After
+  bundlePagesRouterDependencies: true,
+}
 
-export default nextConfig;
+module.exports = nextConfig

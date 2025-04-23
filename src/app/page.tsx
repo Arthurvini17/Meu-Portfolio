@@ -1,3 +1,4 @@
+import Image from "next/image";
 
 export const metadata = {
   title: "Pagina Inicial | Arthur",
@@ -6,11 +7,19 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main className=" justify-center items-center  font-inter flex min-h-">
-      <div className="text-white ">
-        <h1>Olá Devs!</h1>
-        <h1>Me chamo Arthur Vinicius</h1>
-      </div>
-    </main>
+    <>
+      <main className="flex items-center justify-center min-h-screen ">
+        <div className="flex flex-col items-center text-white">
+          <div className="text-xl text-center">
+            <h1>Olá, Sejam Bem-Vindos!</h1>
+            <h1> <span className="font-bold text-blue-300 animate-[wiggle_1s_ease-in-out_infinite]">$this-></span>name="Arthur Vinicius"; </h1>
+            <p>Dev Full Stack</p>
+          </div>
+          <div className="">
+            <Image src="/images/IMAGEM-CHAT.png" alt="imagem" width={400} height={100} />
+          </div>
+        </div>
+      </main>
+    </>
   );
 }
