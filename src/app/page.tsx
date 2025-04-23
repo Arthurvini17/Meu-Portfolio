@@ -12,7 +12,7 @@ export default function Home() {
         <div className="flex flex-col items-center text-white">
           <div className="text-xl text-center">
             <h1>Olá, Sejam Bem-Vindos!</h1>
-            <h1> <span className="font-bold text-blue-300 animate-[wiggle_1s_ease-in-out_infinite]">$this-></span>name="Arthur Vinicius"; </h1>
+            <h1> <span className="font-bold text-blue-300 ">{'$this->name = "Arthur Vinicius";'} </span></h1>
             <p>Dev Full Stack</p>
           </div>
           <div className="">

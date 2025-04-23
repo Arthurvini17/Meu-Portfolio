@@ -19,13 +19,12 @@ export default function Header() {
                         transition={{ duration: 0.5 }}
                     >
                         <p className="text-blue-300 animate-pulse">$Arthur {'/>'}</p>
-                    </p>
-                </motion.li>
-                <li className="bg-[#101010] px-2 py-2 rounded-tr-2xl"><Link href="/">Home</Link></li>
-                <li className="bg-[#101010] px-2 py-2 rounded-tr-2xl"><Link href="/projetos">Projetos</Link></li>
-                <li className="bg-[#101010] px-2 py-2 rounded-tr-2xl"><Link href="/contato">Contato</Link></li>
-            </ul>
-        </nav>
+                    </motion.li>
+                    <li className="bg-[#101010] px-2 py-2 rounded-tr-2xl"><Link href="/">Home</Link></li>
+                    <li className="bg-[#101010] px-2 py-2 rounded-tr-2xl"><Link href="/projetos">Projetos</Link></li>
+                    <li className="bg-[#101010] px-2 py-2 rounded-tr-2xl"><Link href="/contato">Contato</Link></li>
+                </ul>
+            </nav>
         </header >
     )
 }
