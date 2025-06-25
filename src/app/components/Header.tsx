@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import { Poppins } from "next/font/google";
 
 const poppins = Poppins({
@@ -15,9 +14,9 @@ export default function Header() {
       <p className="text-xs font-bold whitespace-nowrap">$Arthur</p>
       <nav className="  gap-2">
         <div className="flex text-sm gap-6 px-4 py-2 rounded-md font-bold">
-          <a href="">Projetos</a>
-          <a href="">Habilidades</a>
-          <a href="">Contato</a>
+          <a href="#">Projetos</a>
+          <a href="#">Habilidades</a>
+          <a href="#">Contato</a>
         </div>
       </nav>
     </header>
