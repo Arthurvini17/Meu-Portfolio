@@ -1,3 +1,4 @@
+import About from "./components/About";
 import Hero from "./components/Hero";
 import Stacks from "./components/Stacks";
 
@@ -10,6 +11,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <About />
       <Stacks />
     </>
   );
