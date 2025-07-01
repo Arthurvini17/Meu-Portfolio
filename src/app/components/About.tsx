@@ -28,9 +28,6 @@ export default function About() {
       </p>
       <p>
           <strong>React</strong> & <strong>Next.js</strong>  <strong>Laravel</strong>    <strong>MySQL</strong>  <strong>Livewire</strong>
-          
-       
-          
           </p>
       <p>
         Estou sempre aprendendo e buscando novas tecnologias para entregar
