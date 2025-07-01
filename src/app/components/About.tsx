@@ -1,6 +1,16 @@
+import { Poppins } from "next/font/google";
+
+ const poppins = Poppins({
+    weight: ["400", "500", "600"],
+    subsets: ["latin"],
+  });
+
+
 export default function About() {
+
+ 
   return (
-    <div className="p-5  flex flex-col  ">
+    <div className={`${poppins.className} p-5  flex flex-col `}>
       <h1 className="text-center text-xl mb-2">Sobre Mim</h1>
       <p className="  leading-relaxed">
         Olá! Eu sou <strong>arthur Vinicius</strong>, um Desenvolvedor Full
@@ -16,20 +26,12 @@ export default function About() {
         já me interessava por como os computadores funcionavam. Desde então,
         venho evoluindo com:
       </p>
-      <ul>
-        <li>
-          <strong>React</strong> & <strong>Next.js</strong>
-        </li>
-        <li>
-          <strong>Laravel</strong>
-        </li>
-        <li>
-          <strong>MySQL</strong>
-        </li>
-        <li>
-          <strong>Livewire</strong>
-        </li>
-      </ul>
+      <p>
+          <strong>React</strong> & <strong>Next.js</strong>  <strong>Laravel</strong>    <strong>MySQL</strong>  <strong>Livewire</strong>
+          
+       
+          
+          </p>
       <p>
         Estou sempre aprendendo e buscando novas tecnologias para entregar
         melhores resultados e me manter atualizado com o mercado.
