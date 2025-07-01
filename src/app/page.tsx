@@ -1,5 +1,6 @@
 import About from "./components/About";
 import Hero from "./components/Hero";
+import ProjectsCards from "./components/Project-Card";
 import Stacks from "./components/Stacks";
 
 export const metadata = {
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <About />
       <Stacks />
+      <ProjectsCards />
     </>
   );
 }
