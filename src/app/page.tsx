@@ -3,6 +3,7 @@ import Contact from "./components/Contact";
 import Hero from "./components/Hero";
 import ProjectsCards from "./components/Project-Card";
 import Stacks from "./components/Stacks";
+import Footer from "./components/Footer";
 
 export const metadata = {
   title: "Pagina Inicial | Arthur",
@@ -17,6 +18,7 @@ export default function Home() {
       <Stacks />
       <ProjectsCards />
       <Contact />
+      <Footer />
     </>
   );
 }
