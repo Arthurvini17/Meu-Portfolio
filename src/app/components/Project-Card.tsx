@@ -16,7 +16,7 @@ const poppins = Poppins({
 export default function ProjectsCards() {
   return (
     <div className={`${poppins.className} p-2 bg-slate-50`}>
-      <h1 className="mb-4 text-center">Meus Projetos</h1>
+      <h1 className="mb-4 font-bold text-center">Meus Projetos</h1>
 
       <Swiper
         modules={[Navigation]}
@@ -48,7 +48,7 @@ export default function ProjectsCards() {
                 Alpine JS </p>
               <div className="flex gap-4 text-xs">
                 <a
-                  href="https://tech-product-lp.vercel.app/"
+                  href="#"
                   className="font-semibold text-blue-500 underline"
                 >
                   Projeto não hospedado
