@@ -11,12 +11,12 @@ export default function Header() {
     <header
       className={`${poppins.className} w-full py-4 px-6 border-b bg-white flex items-center `}
     >
-      <p className="text-xs font-bold whitespace-nowrap">$Arthur</p>
-      <nav className="  gap-2">
-        <div className="flex text-sm gap-6 px-4 py-2 rounded-md font-bold">
-          <a href="#">Projetos</a>
-          <a href="#">Habilidades</a>
-          <a href="#">Contato</a>
+      <p className="font-bold whitespace-nowrap">$Arthur</p>
+      <nav className="gap-2 ">
+        <div className="flex gap-6 px-4 py-2 text-sm font-bold rounded-md">
+          <a href="#projects">Projetos</a>
+          <a href="#stacks">Ferramentas</a>
+          <a href="#contact">Contato</a>
         </div>
       </nav>
     </header>

@@ -15,7 +15,7 @@ const poppins = Poppins({
 
 export default function ProjectsCards() {
   return (
-    <div className={`${poppins.className} p-2 bg-slate-50`}>
+    <div id="projects" className={`${poppins.className} p-2 bg-slate-50`}>
       <h1 className="mb-4 font-bold text-center">Meus Projetos</h1>
 
       <Swiper

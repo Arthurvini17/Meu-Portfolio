@@ -19,7 +19,7 @@ const poppins = Poppins({
 
 export default function Stacks() {
   return (
-    <main className={`${poppins.className}  p-4 bg-slate-50    font-bold`}>
+    <main id="stacks" className={`${poppins.className}  p-4 bg-slate-50    font-bold`}>
       <div className="flex items-center justify-center">
         <h1 className="">Minhas Stacks:</h1>
       </div>
@@ -49,7 +49,7 @@ export default function Stacks() {
 
         <div className="flex items-center py-1.5   justify-center gap-2 w-full h-full bg-white  shadow rounded-xs">
           <h1 className="">HTML </h1>
-          <span className=" ">
+          <span className="">
             <SiHtml5 />
           </span>
         </div>
@@ -90,19 +90,19 @@ export default function Stacks() {
         </div>
 
         <div className="flex items-center  py-1.5  justify-center gap-2 w-full h-full bg-white shadow rounded-xs">
-            
+
           <h1 className="">MySQL </h1>
-          <span className=" text-2xl ">
+          <span className="text-2xl ">
             <SiMysql />
           </span>
 
         </div>
 
         <div className="flex items-center   py-1.5   justify-center gap-2 w-full h-full bg-white shadow rounded-xs">
-            <h1 className="">Docker </h1>
-            <span className="text-xl ">
-              <SiDocker />
-            </span>
+          <h1 className="">Docker </h1>
+          <span className="text-xl ">
+            <SiDocker />
+          </span>
         </div>
 
         <div className="flex items-center py-1.5 justify-center gap-2 w-full h-full bg-white shadow rounded-xs">
