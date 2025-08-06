@@ -7,32 +7,21 @@ const poppins = Poppins({
 
 
 export default function About() {
-
-
   return (
-    <div id="about" className={`${poppins.className} p-5  flex flex-col `}>
-      <h1 className="mb-2 text-xl text-center">Sobre Mim</h1>
-      <p className="leading-relaxed ">
-        Olá! Eu sou <strong>arthur Vinicius</strong>, um Desenvolvedor Full
-        Stack apaixonado por criar experiências digitais incríveis.
-      </p>
-      <p>
-        Tenho <strong>2 anos de experiência</strong> com{" "}
-        <strong>Sistemas Full Stack</strong> e <strong>Banco de Dados</strong>,
-        focando em soluções eficientes que impactam positivamente os usuários.
-      </p>
-      <p>
-        Minha jornada na tecnologia começou cedo — aos <strong>7 anos</strong>{" "}
-        já me interessava por como os computadores funcionavam. Desde então,
-        venho evoluindo com:
-      </p>
-      <p>
-        <strong>React</strong> & <strong>Next.js</strong>  <strong>Laravel</strong>    <strong>MySQL</strong>  <strong>Livewire</strong>
-      </p>
-      <p>
-        Estou sempre aprendendo e buscando novas tecnologias para entregar
-        melhores resultados e me manter atualizado com o mercado.
-      </p>
+    <div
+      id="about"
+      className={`${poppins.className} p-10  flex justify-center bg-white text-gray-800`}
+    >
+      <div className="max-w-5xl space-y-6 text-center">
+        <h1 className="text-3xl font-semibold text-black">Sobre Mim</h1>
+
+        <p className="text-lg leading-relaxed">
+          Olá! Sou <span className="font-semibold text-black">Arthur Vinicius</span>, Desenvolvedor Full Stack apaixonado por transformar ideias em experiências digitais memoráveis.
+          Tenho <span className="font-semibold text-black">2 anos de experiência</span> em <span className="font-semibold">desenvolvimento Full Stack</span> e <span className="font-semibold">bancos de dados</span>, criando soluções que impactam positivamente os usuários.
+          Minha jornada começou cedo, aos <span className="font-semibold">7 anos</span> já era fascinado por tecnologia.
+          Estou sempre aprendendo e acompanhando novas tecnologias para entregar os melhores resultados e me manter atualizado com o mercado.
+        </p>
+      </div>
     </div>
   );
 }
