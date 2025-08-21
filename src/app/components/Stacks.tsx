@@ -17,7 +17,7 @@ const poppins = Poppins({
 });
 
 
-const stackItemClass = "flex items-center justify-center gap-2 py-3 px-4 bg-white shadow rounded-lg w-full h-full";
+const stackItemClass = "flex items-center justify-center gap-2 py-3 px-4 bg-white shadow rounded-lg  ";
 
 
 

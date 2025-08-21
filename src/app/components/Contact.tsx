@@ -5,9 +5,9 @@ import { FaLinkedin } from "react-icons/fa";
 export default function Contact() {
 
     return (
-        <div id="contact" className="p-2 mb-10">
+        <div id="contact" className="p-10 ">
             <h1 className="m-2 text-xl font-bold text-center">Entre em Contato</h1>
-            <div className="flex items-center gap-2 md:max-w-5xl md:mx-auto md:flex md:text-center md:justify-evenly">
+            <div className="flex items-center justify-center w-full gap-2 md:max-w-5xl md:mx-auto md:flex md:text-center md:justify-evenly">
                 <div >
                     <a
                         href="https://wa.me/5581988548132?text=Olá,%20vim%20pelo%20seu%20portfólio!"
