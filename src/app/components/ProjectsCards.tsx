@@ -17,7 +17,7 @@ export default function ProjectsCards() {
     return (
         <section
             id="projects"
-            className={`${poppins.className} bg-slate-50 py-8 px-4 md:px-20 lg:px-40 mt-10 max-w-[1200px] mx-auto`} >
+            className={`${poppins.className}  py-8 px-4 md:px-20 lg:px-40 mt-10 max-w-[1200px] mx-auto`} >
             <h1 className="mb-8 text-3xl font-extrabold text-center text-gray-900">
                 Meus Projetos
             </h1>
@@ -31,7 +31,6 @@ export default function ProjectsCards() {
                 className="w-full"
                 style={{ paddingBottom: 40 }}
             >
-                {/* Slide 1 - HostPool */}
                 <SwiperSlide>
                     <div className="flex flex-col h-full overflow-hidden bg-white rounded-lg shadow-lg">
                         <div className="relative h-[200px] w-full">
@@ -69,7 +68,6 @@ export default function ProjectsCards() {
                     </div>
                 </SwiperSlide>
 
-                {/* Slide 2 - Tech-Product-LP */}
                 <SwiperSlide>
                     <div className="flex flex-col h-full overflow-hidden bg-white rounded-lg shadow-lg">
                         <div className="relative h-[200px] w-full">
@@ -143,6 +141,47 @@ export default function ProjectsCards() {
                                 </a>
                                 <a
                                     href="https://github.com/Arthurvini17/Stockmanager-frontend"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center gap-2 text-blue-600 transition-colors hover:text-blue-800">
+                                    GitHub <FaGithub size={18} />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </SwiperSlide>
+
+
+
+                <SwiperSlide>
+                    <div className="flex flex-col h-full overflow-hidden bg-white rounded-lg shadow-lg">
+                        <div className="relative h-[200px] w-full">
+                            <Image
+                                src="/images/learning+.png"
+                                alt="Lerning + "
+                                className="object-cover"
+                                fill
+                                sizes="(min-width: 1024px) 100vw, 50vw"
+                                priority />
+                        </div>
+                        <div className="flex flex-col flex-grow gap-4 p-6">
+                            <h2 className="text-xl font-semibold text-gray-900">
+                                Learning +
+                            </h2>
+                            <p className="flex-grow text-sm leading-relaxed text-gray-700">
+                                Landing Page Instituicional responsiva
+                            </p>
+                            <p className="font-mono text-xs text-gray-500"> JavaScript | TaiwlwindCSS | ReactJS | NextJs | </p>
+                            <div className="flex gap-6 text-sm font-medium">
+                                <a
+                                    href="https://learning-app-lyart-eta.vercel.app/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-blue-600 underline transition-colors hover:text-blue-800">
+                                    Visualizar
+                                </a>
+                                <a
+                                    href="https://github.com/Arthurvini17/Learning-app"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex items-center gap-2 text-blue-600 transition-colors hover:text-blue-800">
