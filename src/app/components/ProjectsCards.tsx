@@ -52,7 +52,7 @@ const projects = [
         alt: "Imagem Learning+",
         description: "Landing Page Instituicional responsiva",
         stack: "JavaScript | TailwindCSS | ReactJS | NextJs",
-        demo: "https://learning-app-lyart-eta.vercel.app/",
+        demo: "https://learning-applp.vercel.app/",
         github: "https://github.com/Arthurvini17/Learning-app",
     },
     {
@@ -63,6 +63,16 @@ const projects = [
         stack: "JavaScript | TailWindCSS | ReactJS | NextJS",
         demo: "https://desafio-fronten-social-links.vercel.app/",
         github: "https://github.com/Arthurvini17/desafio-fronten-social-links",
+    },
+
+    {
+        title: "Desafio - Lacrei Saúde",
+        image: "/images/desafio-lacrei-saude.png",
+        alt: "imagem desafio lacrei saude",
+        description: "Site  para desafio de projeto voluntario",
+        stack: "JavaScript | TailWindCSS | ReactJS | NextJS | TypeScript",
+        demo: "https://desafio-tecnico-lacrei-saude.vercel.app/",
+        github: "https://github.com/Arthurvini17/desafio-tecnico-lacrei-saude",
     }
 ];
 
