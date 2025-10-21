@@ -6,8 +6,8 @@ import Stacks from "./components/Stacks";
 import Footer from "./components/Footer";
 
 export const metadata = {
-  title: "Pagina Inicial | Arthur",
-  description: "Página inicial ",
+  title: "Arthur Vinicius",
+
 };
 
 export default function Home() {

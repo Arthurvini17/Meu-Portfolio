@@ -64,7 +64,6 @@ const projects = [
         demo: "https://desafio-fronten-social-links.vercel.app/",
         github: "https://github.com/Arthurvini17/desafio-fronten-social-links",
     },
-
     {
         title: "Desafio - Lacrei Saúde",
         image: "/images/desafio-lacrei-saude.png",
@@ -73,7 +72,7 @@ const projects = [
         stack: "JavaScript | TailWindCSS | ReactJS | NextJS | TypeScript",
         demo: "https://desafio-tecnico-lacrei-saude.vercel.app/",
         github: "https://github.com/Arthurvini17/desafio-tecnico-lacrei-saude",
-    }
+    },
 ];
 
 export default function ProjectsCards() {
