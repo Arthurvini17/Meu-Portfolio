@@ -10,6 +10,7 @@ import { SiLinux } from "react-icons/si";
 import { RiNextjsFill } from "react-icons/ri";
 import { IoLogoNodejs } from "react-icons/io5";
 import { DiDocker, DiMysql } from "react-icons/di";
+import { TbBrandReactNative } from "react-icons/tb";
 
 const poppins = Poppins({
   weight: ["400", "500", "600"],
@@ -17,7 +18,7 @@ const poppins = Poppins({
 });
 
 
-const stackItemClass = "flex items-center justify-center gap-2 py-3 px-4 bg-white shadow rounded-lg  ";
+const stackItemClass = "flex items-center justify-center gap-2 py-3 px-4 bg-white shadow rounded-lg";
 
 
 
@@ -101,10 +102,10 @@ export default function Stacks() {
         </div>
 
 
-
-
-
-
+        <div className={stackItemClass}>
+          <h1 className="">ReactNative</h1>
+          <span className="text-xl"><TbBrandReactNative /></span>
+        </div>
 
       </div>
     </main>
