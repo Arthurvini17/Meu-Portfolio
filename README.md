@@ -43,7 +43,6 @@ O layout é totalmente **responsivo**, garantindo uma ótima experiência tanto 
 Desenvolvedor Web • Apaixonado por tecnologia, design e boas experiências digitais.  
 
 📬 Entre em contato:
-- 🐙 
 - ✉️ *arthurdedsec@gmail.com* 
 
 ---
