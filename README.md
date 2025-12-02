@@ -1,35 +1,25 @@
 
 ---
 
-# Projeto novo react e next
+# Meu Portfólio
 
-Aplicação desenvolvida com **React** e **Next.js**, focada em oferecer uma estrutura moderna, rápida e organizada para construção de interfaces web. O projeto utiliza o diretório **app**, seguindo o padrão atual do Next.js, e incorpora boas práticas de componentização e organização do frontend.
-
-## Funcionalidades
-
-* Estrutura baseada no diretório `app/`
-* Componentes reutilizáveis
-* Navegação otimizada pelo Next.js
-* Layout moderno e adequado para expansão
-* Configuração preparada para integração com APIs externas
-* Suporte para estilização modular
+Portfólio criado para apresentar meus projetos e habilidades como desenvolvedor. Aqui você encontra meus principais trabalhos, informações sobre mim e formas de contato.
 
 ## Tecnologias
 
-* **Next.js**
-* **React**
-* **JavaScript**
-* **CSS/Styled Components/Tailwind** (ajuste conforme o projeto)
-* **Node.js** (ambiente de execução)
+* Next.js
+* React
+* JavaScript
 
+## Conteúdo
 
-
-## Objetivo
-
-Entregar uma base sólida e escalável para desenvolvimento de aplicações modernas com React + Next.js, facilitando evolução, manutenção e criação de novas páginas e componentes.
+* Sobre mim
+* Projetos
+* Contato
 
 ## Autor
 
-Projeto desenvolvido por **(Arthur)**.
+Arthur (Marreta)
 
 ---
+
