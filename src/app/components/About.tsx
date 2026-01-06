@@ -10,13 +10,13 @@ export default function About() {
   return (
     <div
       id="about"
-      className={`${poppins.className}   bg-white text-gray-800`}>
-      <div className="flex flex-col items-center ">
-        <h1 className="max-w-xl text-3xl text-black ">Sobre Mim</h1>
+      className={`${poppins.className} py-12 bg-[#0B0F1A] text-[#F2F9FC]`}>
+      <div className="container flex flex-col items-center px-4 mx-auto">
+        <h1 className="mb-6 text-3xl font-bold text-[#F2F9FC] md:text-4xl">Sobre Mim</h1>
 
-        <p className="p-2 text-lg leading-relaxed md:text-center">
-          Olá! Sou <span className="font-semibold text-black">Arthur Vinicius</span>, Desenvolvedor Full Stack apaixonado por transformar ideias em experiências digitais memoráveis.
-          Tenho <span className="font-semibold text-black">2 anos de experiência</span> em <span className="font-semibold">desenvolvimento Full Stack</span> e <span className="font-semibold">bancos de dados</span>, criando soluções que impactam positivamente os usuários.
+        <p className="max-w-3xl p-2 text-lg leading-relaxed text-center text-gray-300">
+          Olá! Sou <span className="font-semibold text-[#3BA9F4]">Arthur Vinicius</span>, Desenvolvedor Full Stack apaixonado por transformar ideias em experiências digitais memoráveis.
+          Tenho <span className="font-semibold text-[#3BA9F4]">2 anos de experiência</span> em <span className="font-semibold">desenvolvimento Full Stack</span> e <span className="font-semibold">bancos de dados</span>, criando soluções que impactam positivamente os usuários.
         </p>
       </div>
     </div>

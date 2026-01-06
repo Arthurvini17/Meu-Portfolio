@@ -27,26 +27,28 @@ export default function Contact() {
 
     ]
     return (
-        <div id="contact" className="p-5 md:p-20">
-            <h1 className="mb-10 text-2xl font-bold text-center md:mb-20 md:text-4xl">Entre em Contato</h1>
+        <div id="contact" className="p-5 md:p-20 bg-[#0B0F1A] text-[#F2F9FC]">
+            <h1 className="mb-10 text-3xl font-bold text-center text-[#F2F9FC] md:mb-20 md:text-4xl">Entre em Contato</h1>
             <div className="flex md:flex md:items-center md:justify-center">
-                <div className="flex flex-col items-center justify-center  md:p-20 shadow-xl border p-5 md:h-80 border-[#a1a1a1]/60 rounded-2xl">
+                <div className="flex flex-col items-center justify-center p-8 transition-all duration-300 md:p-20 shadow-lg border md:h-80 border-[#1F2937] rounded-2xl bg-[#121826] hover:border-[#3BA9F4] hover:shadow-[0_0_20px_rgba(59,169,244,0.1)]">
                     <div className="flex flex-wrap items-start justify-center gap-10 md:gap-16">
 
-                        <div className="flex flex-col items-start gap-4 ">
-                            <h1 className="inline-flex items-center gap-2 p-2 transition-transform duration-300 transform rounded-md cursor-pointer hover:scale-105 hover:bg-gray-100"><MdEmail /> arthurdedsec@gmail.com</h1>
+                        <div className="flex flex-col items-start gap-4">
+                            <h1 className="inline-flex items-center gap-2 p-3 transition-transform duration-300 transform rounded-md cursor-pointer hover:scale-105 hover:bg-[#0B0F1A] hover:text-[#3BA9F4] text-gray-300">
+                                <MdEmail className="text-[#3BA9F4]" /> arthurdedsec@gmail.com
+                            </h1>
                             <a
                                 href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 p-2 transition-transform duration-300 transform rounded-md hover:scale-105 hover:bg-gray-100"
+                                className="inline-flex items-center gap-2 p-3 transition-transform duration-300 transform rounded-md hover:scale-105 hover:bg-[#0B0F1A] hover:text-[#3BA9F4] text-gray-300"
                             >
-                                <IoLogoWhatsapp />
+                                <IoLogoWhatsapp className="text-[#3BA9F4]" />
                                 <span>Whatsapp</span>
                             </a>
                         </div>
 
-                        <div className="flex flex-col items-center gap-4 ">
+                        <div className="flex flex-col items-center gap-4 text-gray-300">
                             {ItensWeb.map((item, index) => (
                                 <ItensCardWeb key={index}
                                     href={item.href}

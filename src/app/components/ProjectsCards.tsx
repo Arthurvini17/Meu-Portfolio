@@ -89,9 +89,9 @@ export default function ProjectsCards() {
   return (
     <section
       id="projects"
-      className={`${poppins.className} py-8 px-4 md:px-20 lg:px-40 mt-10 max-w-[1200px] mx-auto`}
+      className={`${poppins.className} py-16 px-4 md:px-20 lg:px-40 bg-[#0B0F1A]`}
     >
-      <h1 className="mb-8 text-3xl font-extrabold text-center text-gray-900">
+      <h1 className="mb-12 text-3xl font-extrabold text-center text-[#F2F9FC] md:text-4xl">
         Meus Projetos
       </h1>
 
@@ -101,44 +101,44 @@ export default function ProjectsCards() {
         spaceBetween={30}
         slidesPerView={1}
         loop={true}
-        className="w-full"
+        className="w-full max-w-[1200px] mx-auto"
         style={{ paddingBottom: 40 }}
       >
         {projects.map((project, index) => (
           <SwiperSlide key={index}>
-            <div className="flex flex-col h-full overflow-hidden bg-white rounded-lg shadow-lg">
-              <div className="relative h-[200px] w-full">
+            <div className="flex flex-col h-full overflow-hidden transition-all duration-300 border rounded-lg shadow-lg bg-[#121826] border-[#1F2937] hover:border-[#3BA9F4] hover:shadow-[0_0_15px_rgba(59,169,244,0.15)] group">
+              <div className="relative h-[250px] w-full">
                 <Image
                   src={project.image}
                   alt={project.alt}
-                  className="object-cover"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
                   fill
                   sizes="(min-width: 1024px) 100vw, 50vw"
                   priority
                 />
               </div>
-              <div className="flex flex-col flex-grow gap-4 p-6">
-                <h2 className="text-xl font-semibold text-gray-900">
+              <div className="flex flex-col flex-grow gap-4 p-8">
+                <h2 className="text-2xl font-bold text-[#F2F9FC] group-hover:text-[#3BA9F4] transition-colors">
                   {project.title}
                 </h2>
-                <p className="flex-grow text-sm leading-relaxed text-gray-700">
+                <p className="flex-grow text-base leading-relaxed text-gray-300">
                   {project.description}
                 </p>
-                <p className="font-mono text-xs text-gray-500">
+                <p className="font-mono text-xs text-[#3BA9F4]/80">
                   {project.stack}
                 </p>
-                <div className="flex gap-6 text-sm font-medium">
+                <div className="flex gap-6 mt-4 text-sm font-medium">
                   {project.demo ? (
                     <a
                       href={project.demo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-blue-600 underline transition-colors hover:text-blue-800"
+                      className="px-4 py-2 text-[#0B0F1A] bg-[#3BA9F4] rounded hover:bg-[#3BA9F4]/90 transition-colors font-semibold"
                     >
                       Visualizar
                     </a>
                   ) : (
-                    <span className="italic text-gray-400 cursor-not-allowed">
+                    <span className="px-4 py-2 italic text-gray-500 border border-gray-700 rounded cursor-not-allowed bg-[#0B0F1A]">
                       Projeto não hospedado
                     </span>
                   )}
@@ -146,7 +146,7 @@ export default function ProjectsCards() {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-blue-600 transition-colors hover:text-blue-800"
+                    className="flex items-center gap-2 px-4 py-2 text-[#F2F9FC] transition-colors border border-[#3BA9F4] rounded hover:bg-[#3BA9F4]/10"
                   >
                     GitHub <FaGithub size={18} />
                   </a>
