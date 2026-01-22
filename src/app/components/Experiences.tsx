@@ -19,11 +19,22 @@ const experiences = [
     },
     {
         id: 2,
-        role: "Suporte Tecnico / Desenvolvedor",
-        company: "AI Atende+",
-        period: "Atualmente",
-        description: "Atuo como suporte técnico, auxiliando usuários e equipes no uso e configuração do CRM Kommo. Presto suporte operacional e técnico, solucionando problemas e otimizando fluxos de atendimento. Também participo do desenvolvimento e aprimoramento de agentes de IA, contribuindo com lógica, testes e ajustes para automação de processos e melhoria da experiência do usuário.",
+        role: "Suporte Tecnico",
+        company: "AIAtende",
+        period: "Nov-2025 - Dez-2025",
+        description: "Atendimento e suporte técnico no CRM Kommo. Configuração de fluxos, usuários e automações. Resolução de problemas operacionais e técnicos. Apoio às equipes no uso correto da plataforma.",
     },
+
+    {
+        id: 3,
+        role: "Desenvolvedor Full Stack",
+        company: "AIAtende",
+        period: "Atualmente",
+        description: "Desenvolvimento e evolução de agentes de IA. Implementação de lógicas, testes e ajustes de automações. Integração de sistemas e otimização de fluxos de atendimento. Melhoria contínua da experiência do usuário e performance dos agentes.",
+    },
+
+
+
     // Adicione mais experiências aqui
 ];
 
@@ -82,9 +93,10 @@ export default function Experiences() {
                                             <span>{exp.period}</span>
                                         </div>
 
-                                        <p className="leading-relaxed text-gray-300">
-                                            {exp.description}
-                                        </p>
+                                        <p
+                                            className="leading-relaxed text-gray-300"
+                                            dangerouslySetInnerHTML={{ __html: exp.description }}
+                                        />
                                     </div>
                                 </div>
                             </motion.div>

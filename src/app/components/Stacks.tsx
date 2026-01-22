@@ -1,5 +1,5 @@
 import { Poppins } from "next/font/google";
-import { FaLaravel } from "react-icons/fa";
+import { FaLaravel, FaReact } from "react-icons/fa";
 import { SiLivewire } from "react-icons/si";
 import { FaGitAlt } from "react-icons/fa";
 import { FaPhp } from "react-icons/fa";
@@ -34,19 +34,10 @@ export default function Stacks() {
             <span className="text-2xl text-[#e34c26]"><SiHtml5 /></span>
           </div>
 
-
           <div className={stackItemClass}>
-            <h1 className="group-hover:text-[#3BA9F4] transition-colors">TailwindCss</h1>
+            <h1 className="group-hover:text-[#3BA9F4] transition-colors">TailwindCSS</h1>
             <span className="text-2xl text-[#38bdf8]"><SiTailwindcss /></span>
           </div>
-
-
-
-          <div className={stackItemClass}>
-            <h1 className="group-hover:text-[#3BA9F4] transition-colors">PHP</h1>
-            <span className="text-2xl text-[#777bb4]"><FaPhp /></span>
-          </div>
-
 
           <div className={stackItemClass}>
             <h1 className="group-hover:text-[#3BA9F4] transition-colors">Javascript</h1>
@@ -59,6 +50,22 @@ export default function Stacks() {
           </div>
 
 
+          <div className={stackItemClass}>
+            <h1 className="group-hover:text-[#3BA9F4] transition-colors">ReactJS</h1>
+            <span className="text-2xl text-[#61dafb]"><FaReact /></span>
+          </div>
+
+
+          <div className={stackItemClass}>
+            <h1 className="group-hover:text-[#3BA9F4] transition-colors">NextJS</h1>
+            <span className="text-2xl text-white"><RiNextjsFill /></span>
+          </div>
+
+
+          <div className={stackItemClass}>
+            <h1 className="group-hover:text-[#3BA9F4] transition-colors">PHP</h1>
+            <span className="text-2xl text-[#777bb4]"><FaPhp /></span>
+          </div>
 
           <div className={stackItemClass}>
             <h1 className="group-hover:text-[#3BA9F4] transition-colors">Laravel</h1>
@@ -69,13 +76,6 @@ export default function Stacks() {
             <h1 className="group-hover:text-[#3BA9F4] transition-colors">Livewire</h1>
             <span className="text-2xl text-[#fb70a9]"><SiLivewire /></span>
           </div>
-
-
-          <div className={stackItemClass}>
-            <h1 className="group-hover:text-[#3BA9F4] transition-colors">NextJS</h1>
-            <span className="text-2xl text-white"><RiNextjsFill /></span>
-          </div>
-
 
           <div className={stackItemClass}>
             <h1 className="group-hover:text-[#3BA9F4] transition-colors">MySQL</h1>
@@ -105,6 +105,8 @@ export default function Stacks() {
             <h1 className="group-hover:text-[#3BA9F4] transition-colors">ReactNative</h1>
             <span className="text-2xl text-[#61dafb]"><TbBrandReactNative /></span>
           </div>
+
+
 
         </div>
       </div>
