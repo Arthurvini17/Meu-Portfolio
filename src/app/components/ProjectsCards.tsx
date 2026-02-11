@@ -70,7 +70,7 @@ const projects = [
     alt: "imagem desafio lacrei saude",
     description: "Site  para desafio de projeto voluntario",
     stack: "JavaScript | TailWindCSS | ReactJS | NextJS | TypeScript",
-    demo: "https://desafio-tecnico-lacrei-saude.vercel.app/",
+    demo: "https://lacrei-saudelts.vercel.app/",
     github: "https://github.com/Arthurvini17/desafio-tecnico-lacrei-saude",
   },
 
