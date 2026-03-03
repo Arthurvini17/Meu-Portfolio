@@ -31,7 +31,7 @@ export default function Hero() {
             </div>
 
             <div className="container relative z-10 px-6 mx-auto">
-                <div className="flex flex-col items-center max-w-4xl mx-auto text-center gap-8">
+                <div className="flex flex-col items-center max-w-4xl mx-auto text-center gap-5 md:gap-8">
 
                     {/* Badge de Boas-vindas */}
                     <motion.div
@@ -49,7 +49,7 @@ export default function Hero() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: 0.2 }}
-                            className="text-5xl font-bold leading-tight md:text-7xl lg:text-8xl bg-clip-text text-transparent bg-gradient-to-r from-white via-[#F2F9FC] to-[#9CA3AF]"
+                            className="text-4xl font-bold leading-tight md:text-7xl lg:text-8xl bg-clip-text text-transparent bg-gradient-to-r from-white via-[#F2F9FC] to-[#9CA3AF]"
                         >
                             Arthur Vinicius
                         </motion.h1>
@@ -57,7 +57,7 @@ export default function Hero() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: 0.3 }}
-                            className="text-2xl md:text-3xl font-medium text-[#3BA9F4]"
+                            className="text-xl md:text-3xl font-medium text-[#3BA9F4]"
                         >
                             Desenvolvedor Full Stack
                         </motion.h2>
@@ -68,7 +68,7 @@ export default function Hero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.4 }}
-                        className="max-w-2xl text-lg md:text-xl text-gray-300 leading-relaxed"
+                        className="max-w-2xl text-base md:text-xl text-gray-300 leading-relaxed"
                     >
                         Transformo ideias complexas em produtos digitais de alto impacto.
                         Com <span className="text-white font-semibold"> experiência prática</span>,
@@ -80,7 +80,7 @@ export default function Hero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.5 }}
-                        className="flex flex-col sm:flex-row gap-4 mt-4"
+                        className="flex flex-col items-center sm:flex-row gap-4 mt-4"
                     >
                         <Link href="#projects" className="group">
                             <button className="flex items-center gap-2 px-8 py-3.5 text-base font-bold text-white bg-[#3BA9F4] rounded-full hover:bg-[#2c8bc9] transition-all transform hover:scale-105 shadow-lg shadow-[#3BA9F4]/20">

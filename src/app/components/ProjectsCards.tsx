@@ -2,8 +2,9 @@
 
 import { Poppins } from "next/font/google";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 import "swiper/css";
 import Image from "next/image";
 import { FaGithub } from "react-icons/fa";
@@ -96,18 +97,19 @@ export default function ProjectsCards() {
       </h1>
 
       <Swiper
-        modules={[Navigation]}
+        modules={[Navigation, Pagination]}
         navigation
+        pagination={{ clickable: true }}
         spaceBetween={30}
         slidesPerView={1}
         loop={true}
-        className="w-full max-w-[1200px] mx-auto"
-        style={{ paddingBottom: 40 }}
+        className="w-full max-w-[1200px] mx-auto swiper-portfolio"
+        style={{ paddingBottom: 50 }}
       >
         {projects.map((project, index) => (
           <SwiperSlide key={index}>
             <div className="flex flex-col h-full overflow-hidden transition-all duration-300 border rounded-lg shadow-lg bg-[#121826] border-[#1F2937] hover:border-[#3BA9F4] hover:shadow-[0_0_15px_rgba(59,169,244,0.15)] group">
-              <div className="relative h-[250px] w-full">
+              <div className="relative h-[180px] md:h-[250px] w-full">
                 <Image
                   src={project.image}
                   alt={project.alt}
@@ -117,17 +119,17 @@ export default function ProjectsCards() {
                   priority
                 />
               </div>
-              <div className="flex flex-col flex-grow gap-4 p-8">
-                <h2 className="text-2xl font-bold text-[#F2F9FC] group-hover:text-[#3BA9F4] transition-colors">
+              <div className="flex flex-col flex-grow gap-3 md:gap-4 p-5 md:p-8">
+                <h2 className="text-lg md:text-2xl font-bold text-[#F2F9FC] group-hover:text-[#3BA9F4] transition-colors">
                   {project.title}
                 </h2>
-                <p className="flex-grow text-base leading-relaxed text-gray-300">
+                <p className="flex-grow text-sm md:text-base leading-relaxed text-gray-300">
                   {project.description}
                 </p>
                 <p className="font-mono text-xs text-[#3BA9F4]/80">
                   {project.stack}
                 </p>
-                <div className="flex gap-6 mt-4 text-sm font-medium">
+                <div className="flex flex-wrap gap-3 md:gap-6 mt-2 md:mt-4 text-sm font-medium">
                   {project.demo ? (
                     <a
                       href={project.demo}

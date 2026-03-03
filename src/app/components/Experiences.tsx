@@ -60,10 +60,10 @@ export default function Experiences() {
                 </div>
 
                 <div className="relative flex flex-col items-center">
-                    {/* Linha vertical central (visível apenas em desktop) */}
-                    <div className="absolute top-0 bottom-0 left-4 md:left-1/2 w-0.5 bg-[#1F2937] hidden md:block transform md:-translate-x-1/2"></div>
+                    {/* Linha vertical da timeline (mobile: esquerda, desktop: centro) */}
+                    <div className="absolute top-0 bottom-0 left-4 md:left-1/2 w-0.5 bg-[#1F2937] transform -translate-x-1/2 md:-translate-x-1/2"></div>
 
-                    <div className="flex flex-col w-full gap-12">
+                    <div className="flex flex-col w-full gap-8 md:gap-12">
                         {experiences.map((exp, index) => (
                             <motion.div
                                 key={exp.id}
@@ -78,23 +78,23 @@ export default function Experiences() {
                                 <div className="hidden w-5/12 md:block"></div>
 
                                 {/* Ponto central na linha do tempo */}
-                                <div className="absolute left-4 md:left-1/2 w-8 h-8 rounded-full bg-[#121826] border-4 border-[#3BA9F4] z-10 transform -translate-x-1/2 flex items-center justify-center">
-                                    <FaBriefcase className="text-xs text-[#3BA9F4]" />
+                                <div className="absolute left-4 md:left-1/2 w-6 h-6 md:w-8 md:h-8 rounded-full bg-[#121826] border-[3px] md:border-4 border-[#3BA9F4] z-10 transform -translate-x-1/2 flex items-center justify-center">
+                                    <FaBriefcase className="text-[10px] md:text-xs text-[#3BA9F4]" />
                                 </div>
 
                                 {/* Card de conteúdo */}
-                                <div className="w-full pl-12 md:w-5/12 md:pl-0">
-                                    <div className="flex flex-col p-6 transition-all duration-300 border rounded-lg shadow-lg bg-[#121826] border-[#1F2937] hover:border-[#3BA9F4] hover:shadow-[#3BA9F4]/10 group">
-                                        <h3 className="mb-1 text-xl font-bold text-[#F2F9FC] group-hover:text-[#3BA9F4] transition-colors">{exp.role}</h3>
-                                        <h4 className="mb-4 text-lg font-medium text-gray-400">{exp.company}</h4>
+                                <div className="w-full pl-10 md:w-5/12 md:pl-0">
+                                    <div className="flex flex-col p-4 md:p-6 transition-all duration-300 border rounded-lg shadow-lg bg-[#121826] border-[#1F2937] hover:border-[#3BA9F4] hover:shadow-[#3BA9F4]/10 group">
+                                        <h3 className="mb-1 text-base md:text-xl font-bold text-[#F2F9FC] group-hover:text-[#3BA9F4] transition-colors">{exp.role}</h3>
+                                        <h4 className="mb-3 md:mb-4 text-sm md:text-lg font-medium text-gray-400">{exp.company}</h4>
 
-                                        <div className="flex items-center gap-2 mb-4 text-sm text-[#3BA9F4] font-semibold">
+                                        <div className="flex items-center gap-2 mb-3 md:mb-4 text-xs md:text-sm text-[#3BA9F4] font-semibold">
                                             <FaCalendarAlt />
                                             <span>{exp.period}</span>
                                         </div>
 
                                         <p
-                                            className="leading-relaxed text-gray-300"
+                                            className="text-sm md:text-base leading-relaxed text-gray-300"
                                             dangerouslySetInnerHTML={{ __html: exp.description }}
                                         />
                                     </div>

@@ -11,4 +11,35 @@ Linha / borda sutil | #1F2937 | Divisores sutis */
 /* Tipo	HEX	Uso sugerido
 Texto principal	#F2F9FC	Títulos e parágrafos
 Texto secundário	#B0B0B0	Subtítulos, descrições
-Texto com destaque azul	#3BA9F4	Nomes, links, palavras-chave */ 
+Texto com destaque azul	#3BA9F4	Nomes, links, palavras-chave */
+
+/* Swiper - Estilo das setas e paginação */
+.swiper-portfolio .swiper-button-next,
+.swiper-portfolio .swiper-button-prev {
+  color: #3BA9F4;
+  transition: opacity 0.3s;
+}
+
+.swiper-portfolio .swiper-button-next:after,
+.swiper-portfolio .swiper-button-prev:after {
+  font-size: 24px;
+}
+
+.swiper-portfolio .swiper-pagination-bullet {
+  background: #1F2937;
+  opacity: 1;
+  width: 10px;
+  height: 10px;
+}
+
+.swiper-portfolio .swiper-pagination-bullet-active {
+  background: #3BA9F4;
+}
+
+/* Mobile: esconde setas, mostra paginação */
+@media (max-width: 768px) {
+  .swiper-portfolio .swiper-button-next,
+  .swiper-portfolio .swiper-button-prev {
+    display: none;
+  }
+}
