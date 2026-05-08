@@ -1,7 +1,7 @@
 "use client";
 
 import { useChat } from 'ai/react';
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { FaRobot, FaTimes, FaPaperPlane } from 'react-icons/fa';
 
@@ -9,6 +9,8 @@ export default function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
   const { messages, input, handleInputChange, handleSubmit, isLoading, error } = useChat();
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const summarySentRef = useRef(false);
+  const inactivityTimerRef = useRef<NodeJS.Timeout | null>(null);
 
   // Auto-scroll para a última mensagem
   useEffect(() => {
@@ -16,6 +18,42 @@ export default function ChatWidget() {
       messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   }, [messages]);
+
+  const sendSummary = useCallback(async () => {
+    if (summarySentRef.current || messages.length < 2) return;
+    summarySentRef.current = true;
+    
+    try {
+      await fetch('/api/chat/summary', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ messages }),
+      });
+    } catch (err) {
+      console.error('Erro ao enviar resumo:', err);
+      summarySentRef.current = false;
+    }
+  }, [messages]);
+
+  // Reseta o timer de inatividade (2 minutos) a cada nova mensagem
+  useEffect(() => {
+    if (messages.length > 1) {
+      if (inactivityTimerRef.current) clearTimeout(inactivityTimerRef.current);
+      
+      inactivityTimerRef.current = setTimeout(() => {
+        sendSummary();
+      }, 2 * 60 * 1000); // 2 minutos
+    }
+
+    return () => {
+      if (inactivityTimerRef.current) clearTimeout(inactivityTimerRef.current);
+    };
+  }, [messages, sendSummary]);
+
+  const handleCloseChat = () => {
+    setIsOpen(false);
+    sendSummary();
+  };
 
   return (
     <>
@@ -54,7 +92,7 @@ export default function ChatWidget() {
                 </div>
               </div>
               <button
-                onClick={() => setIsOpen(false)}
+                onClick={handleCloseChat}
                 className="text-gray-400 hover:text-white transition-colors"
                 aria-label="Fechar chat"
               >

@@ -1,41 +1,12 @@
 import { openai } from '@ai-sdk/openai';
 import { streamText } from 'ai';
-import { Resend } from 'resend';
 
 export const dynamic = 'force-dynamic';
 export const maxDuration = 30;
 
-// Inicializa o Resend. Certifique-se de configurar a variável RESEND_API_KEY
-const resend = new Resend(process.env.RESEND_API_KEY || 're_123');
-
 export async function POST(req: Request) {
   try {
     const { messages } = await req.json();
-
-    // Identifica se é a primeira mensagem da conversa
-    const isFirstMessage = messages.length === 1;
-    const lastUserMessage = messages[messages.length - 1];
-
-    // Envia o e-mail apenas na primeira mensagem da conversa
-    if (isFirstMessage && lastUserMessage?.role === 'user') {
-      console.log('[PROD LOG] Iniciando envio de email via Resend...');
-      console.log('[PROD LOG] EMAIL_TO configurado:', process.env.EMAIL_TO ? 'Sim' : 'Não');
-      console.log('[PROD LOG] RESEND_API_KEY configurada:', process.env.RESEND_API_KEY ? 'Sim' : 'Não');
-      
-      await resend.emails.send({
-        from: 'Notificação Portfolio <onboarding@resend.dev>',
-        to: [process.env.EMAIL_TO || 'seu-email@gmail.com'],
-        subject: 'Nova conversa iniciada no seu Portfólio! 🚀',
-        html: `<p>Alguém começou a conversar com sua IA no portfólio.</p>
-               <p><strong>Primeira mensagem do usuário:</strong></p>
-               <blockquote style="border-left: 4px solid #3BA9F4; padding-left: 16px; color: #555;">
-                 ${lastUserMessage.content}
-               </blockquote>
-               <p><small>Você pode configurar um domínio próprio no Resend para alterar o remetente.</small></p>`,
-      })
-      .then(response => console.log('[PROD LOG] Sucesso no Resend:', response))
-      .catch(err => console.error('[PROD LOG] ERRO FATAL no Resend:', err));
-    }
 
     const systemPrompt = `
     ### PROMPT DO SISTEMA: Nina — Assistente Virtual de Arthur Vinicius
