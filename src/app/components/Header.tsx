@@ -35,18 +35,16 @@ export default function Header() {
   return (
     <header
       className={`${poppins.className} fixed top-0 w-full z-50 transition-all duration-300 ${scrolled
-          ? "bg-[#0B0F1A]/80 backdrop-blur-md border-b border-[#1F2937] py-4"
-          : "bg-transparent py-6"
+        ? "bg-[#050505]/80 backdrop-blur-md border-b border-[#1f1f1f] py-4"
+        : "bg-transparent py-6"
         }`}
     >
       <div className="container px-6 mx-auto flex items-center justify-between">
 
         {/* Logo */}
-        <Link href="/" className="relative z-50 group">
-          <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-[#3BA9F4] group-hover:to-white transition-all duration-300">
-            Arthur
-            <span className="text-[#3BA9F4]">Vinicius</span>
-            <span className="text-[#3BA9F4] group-hover:text-white transition-colors">.</span>
+        <Link href="/" className="relative z-50 flex items-baseline group">
+          <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#8b5cf6] to-[#3BA9F4] transition-all duration-300">
+            Arthur Vinícius
           </span>
         </Link>
 
@@ -70,12 +68,12 @@ export default function Header() {
             <a href="https://github.com/Arthurvini17" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
               <FaGithub size={20} />
             </a>
-            <a href="https://www.linkedin.com/in/arthur-vinicius-b22202270/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#0A66C2] transition-colors">
+            <a href="https://www.linkedin.com/in/arthurviniciusdev/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#0A66C2] transition-colors">
               <FaLinkedin size={20} />
             </a>
           </div>
           <Link href="#contact">
-            <button className="px-4 py-2 text-xs font-bold text-[#0B0F1A] bg-white rounded-md hover:bg-[#3BA9F4] transition-colors">
+            <button className="px-4 py-2 text-xs font-bold text-[#050505] bg-white rounded-md hover:bg-[#3BA9F4] transition-colors">
               Vamos conversar?
             </button>
           </Link>
@@ -97,7 +95,7 @@ export default function Header() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: "100%" }}
               transition={{ type: "tween", duration: 0.3 }}
-              className="fixed inset-0 z-40 flex flex-col items-center justify-center bg-[#0B0F1A] md:hidden"
+              className="fixed inset-0 z-40 flex flex-col items-center justify-center bg-[#050505] md:hidden"
             >
               <nav className="flex flex-col items-center gap-8">
                 {navLinks.map((link) => (
@@ -117,7 +115,7 @@ export default function Header() {
                   <a href="https://github.com/Arthurvini17" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                     <FaGithub size={28} />
                   </a>
-                  <a href="https://www.linkedin.com/in/arthur-vinicius-b22202270/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#0A66C2] transition-colors">
+                  <a href="https://www.linkedin.com/in/arthurviniciusdev/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#0A66C2] transition-colors">
                     <FaLinkedin size={28} />
                   </a>
                 </div>
