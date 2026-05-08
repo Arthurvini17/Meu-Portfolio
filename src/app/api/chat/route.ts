@@ -18,7 +18,7 @@ export async function POST(req: Request) {
 
     // Envia o e-mail apenas na primeira mensagem da conversa
     if (isFirstMessage && lastUserMessage?.role === 'user') {
-      resend.emails.send({
+      await resend.emails.send({
         from: 'Notificação Portfolio <onboarding@resend.dev>',
         to: [process.env.EMAIL_TO || 'seu-email@gmail.com'],
         subject: 'Nova conversa iniciada no seu Portfólio! 🚀',
