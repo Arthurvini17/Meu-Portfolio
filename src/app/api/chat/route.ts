@@ -18,6 +18,10 @@ export async function POST(req: Request) {
 
     // Envia o e-mail apenas na primeira mensagem da conversa
     if (isFirstMessage && lastUserMessage?.role === 'user') {
+      console.log('[PROD LOG] Iniciando envio de email via Resend...');
+      console.log('[PROD LOG] EMAIL_TO configurado:', process.env.EMAIL_TO ? 'Sim' : 'Não');
+      console.log('[PROD LOG] RESEND_API_KEY configurada:', process.env.RESEND_API_KEY ? 'Sim' : 'Não');
+      
       await resend.emails.send({
         from: 'Notificação Portfolio <onboarding@resend.dev>',
         to: [process.env.EMAIL_TO || 'seu-email@gmail.com'],
@@ -28,7 +32,9 @@ export async function POST(req: Request) {
                  ${lastUserMessage.content}
                </blockquote>
                <p><small>Você pode configurar um domínio próprio no Resend para alterar o remetente.</small></p>`,
-      }).catch(err => console.error('Erro ao enviar email via Resend:', err));
+      })
+      .then(response => console.log('[PROD LOG] Sucesso no Resend:', response))
+      .catch(err => console.error('[PROD LOG] ERRO FATAL no Resend:', err));
     }
 
     const systemPrompt = `
