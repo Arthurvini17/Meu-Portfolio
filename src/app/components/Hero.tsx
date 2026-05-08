@@ -86,7 +86,7 @@ export default function Hero() {
                     >
                         <div className="flex flex-col items-center">
                             <span className="text-3xl md:text-4xl font-bold text-white mb-2">15+</span>
-                            <span className="text-xs md:text-sm text-gray-500 uppercase tracking-widest font-medium">Sistemas Entregues</span>
+                            <span className="text-xs md:text-sm text-gray-500 uppercase tracking-widest font-medium">Projetos Feitos</span>
                         </div>
                         <div className="flex flex-col items-center">
                             <span className="text-3xl md:text-4xl font-bold text-white mb-2">4+</span>
