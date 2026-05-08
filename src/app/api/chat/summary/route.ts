@@ -24,7 +24,7 @@ export async function POST(req: Request) {
     const { text: summary } = await generateText({
       model: openai('gpt-4o-mini'),
       system: 'Você é um assistente que resume conversas. Leia a conversa a seguir entre um Visitante e a IA Assistente (Nina). Crie um resumo curto (máximo de 3 parágrafos) destacando os principais interesses e perguntas do visitante.',
-      messages: messages.map((m: any) => ({
+      messages: messages.map((m: { role: 'user' | 'assistant' | 'system'; content: string }) => ({
         role: m.role,
         content: m.content
       }))
