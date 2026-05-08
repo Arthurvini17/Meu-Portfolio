@@ -2,6 +2,9 @@ import { openai } from '@ai-sdk/openai';
 import { streamText } from 'ai';
 import { Resend } from 'resend';
 
+export const dynamic = 'force-dynamic';
+export const maxDuration = 30;
+
 // Inicializa o Resend. Certifique-se de configurar a variável RESEND_API_KEY
 const resend = new Resend(process.env.RESEND_API_KEY || 're_123');
 
