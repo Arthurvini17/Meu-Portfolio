@@ -40,7 +40,7 @@ const experiences = [
 
 export default function Experiences() {
     return (
-        <section id="experiences" className={`${poppins.className} py-20 bg-[#0B0F1A] text-[#F2F9FC]`}>
+        <section id="experiences" className={`${poppins.className} py-20 bg-[#050505] text-[#F2F9FC]`}>
             <div className="container px-4 mx-auto max-w-6xl">
                 <div className="mb-16 text-center">
                     <motion.h2
@@ -61,7 +61,7 @@ export default function Experiences() {
 
                 <div className="relative flex flex-col items-center">
                     {/* Linha vertical da timeline (mobile: esquerda, desktop: centro) */}
-                    <div className="absolute top-0 bottom-0 left-4 md:left-1/2 w-0.5 bg-[#1F2937] transform -translate-x-1/2 md:-translate-x-1/2"></div>
+                    <div className="absolute top-0 bottom-0 left-4 md:left-1/2 w-0.5 bg-[#1f1f1f] transform -translate-x-1/2 md:-translate-x-1/2"></div>
 
                     <div className="flex flex-col w-full gap-8 md:gap-12">
                         {experiences.map((exp, index) => (
@@ -78,13 +78,13 @@ export default function Experiences() {
                                 <div className="hidden w-5/12 md:block"></div>
 
                                 {/* Ponto central na linha do tempo */}
-                                <div className="absolute left-4 md:left-1/2 w-6 h-6 md:w-8 md:h-8 rounded-full bg-[#121826] border-[3px] md:border-4 border-[#3BA9F4] z-10 transform -translate-x-1/2 flex items-center justify-center">
+                                <div className="absolute left-4 md:left-1/2 w-6 h-6 md:w-8 md:h-8 rounded-full bg-[#0a0a0a] border-[3px] md:border-4 border-[#3BA9F4] z-10 transform -translate-x-1/2 flex items-center justify-center">
                                     <FaBriefcase className="text-[10px] md:text-xs text-[#3BA9F4]" />
                                 </div>
 
                                 {/* Card de conteúdo */}
                                 <div className="w-full pl-10 md:w-5/12 md:pl-0">
-                                    <div className="flex flex-col p-4 md:p-6 transition-all duration-300 border rounded-lg shadow-lg bg-[#121826] border-[#1F2937] hover:border-[#3BA9F4] hover:shadow-[#3BA9F4]/10 group">
+                                    <div className="flex flex-col p-4 md:p-6 transition-all duration-300 border rounded-lg shadow-lg bg-[#0a0a0a] border-[#1f1f1f] hover:border-[#3BA9F4] hover:shadow-[#3BA9F4]/10 group">
                                         <h3 className="mb-1 text-base md:text-xl font-bold text-[#F2F9FC] group-hover:text-[#3BA9F4] transition-colors">{exp.role}</h3>
                                         <h4 className="mb-3 md:mb-4 text-sm md:text-lg font-medium text-gray-400">{exp.company}</h4>
 

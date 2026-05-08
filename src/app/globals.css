@@ -4,9 +4,9 @@
 
 
 /* Elemento | HEX | Uso sugerido
-Fundo principal | #0B0F1A | Cor de fundo global
-Fundo secundário (cards etc) | #121826 | Cards, seções, containers internos
-Linha / borda sutil | #1F2937 | Divisores sutis */
+Fundo principal | #050505 | Cor de fundo global
+Fundo secundário (cards etc) | #0a0a0a | Cards, seções, containers internos
+Linha / borda sutil | #1f1f1f | Divisores sutis */
 
 /* Tipo	HEX	Uso sugerido
 Texto principal	#F2F9FC	Títulos e parágrafos
@@ -26,7 +26,7 @@ Texto com destaque azul	#3BA9F4	Nomes, links, palavras-chave */
 }
 
 .swiper-portfolio .swiper-pagination-bullet {
-  background: #1F2937;
+  background: #1f1f1f;
   opacity: 1;
   width: 10px;
   height: 10px;

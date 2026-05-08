@@ -4,7 +4,7 @@ import { SiLivewire } from "react-icons/si";
 import { FaGitAlt } from "react-icons/fa";
 import { FaPhp } from "react-icons/fa";
 import { FaJs } from "react-icons/fa";
-import { SiTailwindcss } from "react-icons/si";
+import { SiTailwindcss, SiOpenai, SiExpress, SiPostgresql, SiMongodb, SiPrisma } from "react-icons/si";
 import { SiHtml5 } from "react-icons/si";
 import { SiLinux } from "react-icons/si";
 import { RiNextjsFill } from "react-icons/ri";
@@ -18,11 +18,11 @@ const poppins = Poppins({
 });
 
 
-const stackItemClass = "flex items-center justify-center gap-1.5 md:gap-2 py-3 px-3 md:py-4 md:px-6 bg-[#121826] border border-[#1F2937] hover:border-[#3BA9F4] hover:shadow-[0_0_15px_rgba(59,169,244,0.3)] transition-all duration-300 rounded-lg group";
+const stackItemClass = "flex items-center justify-center gap-1.5 md:gap-2 py-3 px-3 md:py-4 md:px-6 bg-[#0a0a0a] border border-[#1f1f1f] hover:border-[#3BA9F4] hover:shadow-[0_0_15px_rgba(59,169,244,0.3)] transition-all duration-300 rounded-lg group";
 
 export default function Stacks() {
   return (
-    <main id="stacks" className={`${poppins.className} py-16 bg-[#0B0F1A] text-[#F2F9FC] font-bold`}>
+    <main id="stacks" className={`${poppins.className} py-16 bg-[#050505] text-[#F2F9FC] font-bold`}>
       <div className="flex items-center justify-center mb-10">
         <h1 className="text-3xl md:text-4xl">Minhas Stacks:</h1>
       </div>
@@ -104,6 +104,31 @@ export default function Stacks() {
           <div className={stackItemClass}>
             <h1 className="text-xs md:text-base group-hover:text-[#3BA9F4] transition-colors">ReactNative</h1>
             <span className="text-2xl text-[#61dafb]"><TbBrandReactNative /></span>
+          </div>
+
+          <div className={stackItemClass}>
+            <h1 className="text-xs md:text-base group-hover:text-[#3BA9F4] transition-colors">OpenAI</h1>
+            <span className="text-2xl text-white"><SiOpenai /></span>
+          </div>
+
+          <div className={stackItemClass}>
+            <h1 className="text-xs md:text-base group-hover:text-[#3BA9F4] transition-colors">Express</h1>
+            <span className="text-2xl text-gray-300"><SiExpress /></span>
+          </div>
+
+          <div className={stackItemClass}>
+            <h1 className="text-xs md:text-base group-hover:text-[#3BA9F4] transition-colors">PostgreSQL</h1>
+            <span className="text-2xl text-[#336791]"><SiPostgresql /></span>
+          </div>
+
+          <div className={stackItemClass}>
+            <h1 className="text-xs md:text-base group-hover:text-[#3BA9F4] transition-colors">MongoDB</h1>
+            <span className="text-2xl text-[#47A248]"><SiMongodb /></span>
+          </div>
+
+          <div className={stackItemClass}>
+            <h1 className="text-xs md:text-base group-hover:text-[#3BA9F4] transition-colors">Prisma</h1>
+            <span className="text-2xl text-white"><SiPrisma /></span>
           </div>
 
 

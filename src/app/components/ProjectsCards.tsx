@@ -90,7 +90,7 @@ export default function ProjectsCards() {
   return (
     <section
       id="projects"
-      className={`${poppins.className} py-16 px-4 md:px-20 lg:px-40 bg-[#0B0F1A]`}
+      className={`${poppins.className} py-16 px-4 md:px-20 lg:px-40 bg-[#050505]`}
     >
       <h1 className="mb-12 text-3xl font-extrabold text-center text-[#F2F9FC] md:text-4xl">
         Meus Projetos
@@ -108,7 +108,7 @@ export default function ProjectsCards() {
       >
         {projects.map((project, index) => (
           <SwiperSlide key={index}>
-            <div className="flex flex-col h-full overflow-hidden transition-all duration-300 border rounded-lg shadow-lg bg-[#121826] border-[#1F2937] hover:border-[#3BA9F4] hover:shadow-[0_0_15px_rgba(59,169,244,0.15)] group">
+            <div className="flex flex-col h-full overflow-hidden transition-all duration-300 border rounded-lg shadow-lg bg-[#0a0a0a] border-[#1f1f1f] hover:border-[#3BA9F4] hover:shadow-[0_0_15px_rgba(59,169,244,0.15)] group">
               <div className="relative h-[180px] md:h-[250px] w-full">
                 <Image
                   src={project.image}
@@ -135,12 +135,12 @@ export default function ProjectsCards() {
                       href={project.demo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-2 text-[#0B0F1A] bg-[#3BA9F4] rounded hover:bg-[#3BA9F4]/90 transition-colors font-semibold"
+                      className="px-4 py-2 text-[#050505] bg-[#3BA9F4] rounded hover:bg-[#3BA9F4]/90 transition-colors font-semibold"
                     >
                       Visualizar
                     </a>
                   ) : (
-                    <span className="px-4 py-2 italic text-gray-500 border border-gray-700 rounded cursor-not-allowed bg-[#0B0F1A]">
+                    <span className="px-4 py-2 italic text-gray-500 border border-gray-700 rounded cursor-not-allowed bg-[#050505]">
                       Projeto não hospedado
                     </span>
                   )}

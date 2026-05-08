@@ -22,26 +22,26 @@ export default function Contact() {
         {
             icon: <LiaLinkedin />,
             title: "LinkedIn",
-            href: "https://www.linkedin.com/in/arthur-vinicius-b22202270/"
+            href: "https://www.linkedin.com/in/arthurviniciusdev/"
         },
 
     ]
     return (
-        <div id="contact" className="px-4 py-12 md:p-20 bg-[#0B0F1A] text-[#F2F9FC]">
+        <div id="contact" className="px-4 py-12 md:p-20 bg-[#050505] text-[#F2F9FC]">
             <h1 className="mb-10 text-3xl font-bold text-center text-[#F2F9FC] md:mb-20 md:text-4xl">Entre em Contato</h1>
             <div className="flex md:flex md:items-center items-center justify-center md:justify-center">
-                <div className="flex flex-col items-center justify-center p-6 md:p-20 transition-all duration-300 shadow-lg border md:h-80 border-[#1F2937] rounded-2xl bg-[#121826] hover:border-[#3BA9F4] hover:shadow-[0_0_20px_rgba(59,169,244,0.1)]">
+                <div className="flex flex-col items-center justify-center p-6 md:p-20 transition-all duration-300 shadow-lg border md:h-80 border-[#1f1f1f] rounded-2xl bg-[#0a0a0a] hover:border-[#3BA9F4] hover:shadow-[0_0_20px_rgba(59,169,244,0.1)]">
                     <div className="flex flex-col md:flex-row flex-wrap items-center justify-center gap-6 md:gap-16">
 
                         <div className="flex flex-col items-start gap-4">
-                            <h1 className="inline-flex items-center gap-2 p-3 transition-transform duration-300 transform rounded-md cursor-pointer hover:scale-105 hover:bg-[#0B0F1A] hover:text-[#3BA9F4] text-gray-300">
+                            <h1 className="inline-flex items-center gap-2 p-3 transition-transform duration-300 transform rounded-md cursor-pointer hover:scale-105 hover:bg-[#050505] hover:text-[#3BA9F4] text-gray-300">
                                 <MdEmail className="text-[#3BA9F4]" /> arthurdedsec@gmail.com
                             </h1>
                             <a
                                 href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 p-3 transition-transform duration-300 transform rounded-md hover:scale-105 hover:bg-[#0B0F1A] hover:text-[#3BA9F4] text-gray-300"
+                                className="inline-flex items-center gap-2 p-3 transition-transform duration-300 transform rounded-md hover:scale-105 hover:bg-[#050505] hover:text-[#3BA9F4] text-gray-300"
                             >
                                 <IoLogoWhatsapp className="text-[#3BA9F4]" />
                                 <span>Whatsapp</span>
