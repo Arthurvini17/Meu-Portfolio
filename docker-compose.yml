@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  meu-portfolio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: meu-portfolio-app
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env.local
