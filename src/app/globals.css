@@ -1,7 +1,38 @@
  @import "tailwindcss";
 
+/* Fundo e cor de texto globais.
+   Cada seção da home já pinta o próprio #050505, então isto é inerte lá —
+   existe para que rotas sem seção própria (404 e futuras) não caiam no
+   branco padrão do navegador. */
+html {
+  background-color: #050505;
+  /* Os links do header apontam para ancoras (#stacks, #projects...): sem isto
+     o navegador teleporta a pagina em vez de percorre-la. */
+  scroll-behavior: smooth;
+}
 
+/* Quem pediu menos movimento no sistema recebe o salto instantaneo de volta. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
 
+body {
+  background-color: #050505;
+  color: #F2F9FC;
+}
+
+/* Superfícies do navegador que também pertencem ao sistema */
+::selection {
+  background-color: #3BA9F4;
+  color: #050505;
+}
+
+:where(a, button, input, textarea, [tabindex]):focus-visible {
+  outline: 2px solid #3BA9F4;
+  outline-offset: 3px;
+}
 
 /* Elemento | HEX | Uso sugerido
 Fundo principal | #050505 | Cor de fundo global

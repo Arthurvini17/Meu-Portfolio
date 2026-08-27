@@ -65,10 +65,10 @@ export default function Header() {
         {/* Social & CTA (Desktop) */}
         <div className="hidden md:flex items-center gap-4">
           <div className="flex items-center gap-3 pr-4 border-r border-gray-700">
-            <a href="https://github.com/Arthurvini17" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+            <a href="https://github.com/Arthurvini17" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Arthur Vinícius" className="text-gray-400 hover:text-white transition-colors">
               <FaGithub size={20} />
             </a>
-            <a href="https://www.linkedin.com/in/arthurviniciusdev/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#0A66C2] transition-colors">
+            <a href="https://www.linkedin.com/in/arthurviniciusdev/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Arthur Vinícius" className="text-gray-400 hover:text-[#0A66C2] transition-colors">
               <FaLinkedin size={20} />
             </a>
           </div>
@@ -82,6 +82,8 @@ export default function Header() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
+          aria-expanded={isOpen}
+          aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
           className="md:hidden relative z-50 text-gray-300 hover:text-white"
         >
           {isOpen ? <HiX size={28} /> : <HiMenuAlt3 size={28} />}
@@ -112,10 +114,10 @@ export default function Header() {
                 <div className="w-16 h-0.5 bg-gray-800 my-4" />
 
                 <div className="flex items-center gap-6">
-                  <a href="https://github.com/Arthurvini17" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+                  <a href="https://github.com/Arthurvini17" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Arthur Vinícius" className="text-gray-400 hover:text-white transition-colors">
                     <FaGithub size={28} />
                   </a>
-                  <a href="https://www.linkedin.com/in/arthurviniciusdev/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#0A66C2] transition-colors">
+                  <a href="https://www.linkedin.com/in/arthurviniciusdev/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Arthur Vinícius" className="text-gray-400 hover:text-[#0A66C2] transition-colors">
                     <FaLinkedin size={28} />
                   </a>
                 </div>

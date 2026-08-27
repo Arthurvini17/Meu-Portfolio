@@ -1,12 +1,20 @@
+"use client";
+
+import type { ReactNode } from "react";
+import { motion, useReducedMotion } from "motion/react";
 import { Poppins } from "next/font/google";
-import { FaLaravel, FaReact } from "react-icons/fa";
-import { SiLivewire } from "react-icons/si";
-import { FaGitAlt } from "react-icons/fa";
-import { FaPhp } from "react-icons/fa";
-import { FaJs } from "react-icons/fa";
-import { SiTailwindcss, SiOpenai, SiExpress, SiPostgresql, SiMongodb, SiPrisma } from "react-icons/si";
-import { SiHtml5 } from "react-icons/si";
-import { SiLinux } from "react-icons/si";
+import { FaLaravel, FaReact, FaGitAlt, FaPhp, FaJs } from "react-icons/fa";
+import {
+  SiLivewire,
+  SiTailwindcss,
+  SiOpenai,
+  SiExpress,
+  SiPostgresql,
+  SiMongodb,
+  SiPrisma,
+  SiHtml5,
+  SiLinux,
+} from "react-icons/si";
 import { RiNextjsFill } from "react-icons/ri";
 import { IoLogoNodejs } from "react-icons/io5";
 import { DiDocker, DiMysql } from "react-icons/di";
@@ -17,124 +25,105 @@ const poppins = Poppins({
   subsets: ["latin"],
 });
 
+type Stack = { name: string; icon: ReactNode; color: string };
 
-const stackItemClass = "flex items-center justify-center gap-1.5 md:gap-2 py-3 px-3 md:py-4 md:px-6 bg-[#0a0a0a] border border-[#1f1f1f] hover:border-[#3BA9F4] hover:shadow-[0_0_15px_rgba(59,169,244,0.3)] transition-all duration-300 rounded-lg group";
+/** Agrupadas para que dê para responder "no que ele é forte?" sem ler as 19. */
+const grupos: { titulo: string; itens: Stack[] }[] = [
+  {
+    titulo: "Front-end",
+    itens: [
+      { name: "HTML", icon: <SiHtml5 />, color: "#e34c26" },
+      { name: "Javascript", icon: <FaJs />, color: "#f7df1e" },
+      { name: "ReactJS", icon: <FaReact />, color: "#61dafb" },
+      { name: "NextJS", icon: <RiNextjsFill />, color: "#ffffff" },
+      { name: "TailwindCSS", icon: <SiTailwindcss />, color: "#38bdf8" },
+      { name: "ReactNative", icon: <TbBrandReactNative />, color: "#61dafb" },
+    ],
+  },
+  {
+    titulo: "Back-end",
+    itens: [
+      { name: "NodeJS", icon: <IoLogoNodejs />, color: "#68a063" },
+      { name: "Express", icon: <SiExpress />, color: "#d1d5db" },
+      { name: "PHP", icon: <FaPhp />, color: "#777bb4" },
+      { name: "Laravel", icon: <FaLaravel />, color: "#ff2d20" },
+      { name: "Livewire", icon: <SiLivewire />, color: "#fb70a9" },
+    ],
+  },
+  {
+    titulo: "Dados",
+    itens: [
+      { name: "MySQL", icon: <DiMysql />, color: "#00a4c4" },
+      { name: "PostgreSQL", icon: <SiPostgresql />, color: "#4b8bc4" },
+      { name: "MongoDB", icon: <SiMongodb />, color: "#47A248" },
+      { name: "Prisma", icon: <SiPrisma />, color: "#ffffff" },
+    ],
+  },
+  {
+    titulo: "Infra e IA",
+    itens: [
+      { name: "Docker", icon: <DiDocker />, color: "#2496ed" },
+      { name: "Linux", icon: <SiLinux />, color: "#ffffff" },
+      { name: "Git", icon: <FaGitAlt />, color: "#f1502f" },
+      { name: "OpenAI", icon: <SiOpenai />, color: "#ffffff" },
+    ],
+  },
+];
+
+const stackItemClass =
+  "flex items-center justify-center gap-1.5 md:gap-2 py-3 px-3 md:py-4 md:px-6 bg-[#0a0a0a] border border-[#1f1f1f] hover:border-[#3BA9F4] hover:shadow-[0_0_15px_rgba(59,169,244,0.3)] transition-all duration-300 rounded-lg group";
 
 export default function Stacks() {
+  const reduzirMovimento = useReducedMotion();
+
   return (
-    <main id="stacks" className={`${poppins.className} py-16 bg-[#050505] text-[#F2F9FC] font-bold`}>
+    <section
+      id="stacks"
+      aria-labelledby="stacks-heading"
+      className={`${poppins.className} py-16 bg-[#050505] text-[#F2F9FC] font-bold`}
+    >
       <div className="flex items-center justify-center mb-10">
-        <h1 className="text-3xl md:text-4xl">Minhas Stacks:</h1>
+        <motion.h2
+          id="stacks-heading"
+          initial={{ opacity: 0, y: reduzirMovimento ? 0 : -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.5 }}
+          className="text-3xl md:text-4xl"
+        >
+          Minhas Ferramentas
+        </motion.h2>
       </div>
+
       <div className="container px-4 mx-auto">
-        <div className="grid grid-cols-2 gap-3 sm:gap-4 md:gap-6 text-center sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+        {grupos.map((grupo, gi) => (
+          <motion.div
+            key={grupo.titulo}
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.45, delay: gi * 0.08 }}
+            className="mb-8 last:mb-0"
+          >
+            <h3 className="mb-4 text-sm font-semibold tracking-widest text-gray-400 uppercase">
+              {grupo.titulo}
+            </h3>
 
-          <div className={stackItemClass}>
-            <h1 className="text-xs md:text-base group-hover:text-[#3BA9F4] transition-colors">HTML</h1>
-            <span className="text-2xl text-[#e34c26]"><SiHtml5 /></span>
-          </div>
-
-          <div className={stackItemClass}>
-            <h1 className="text-xs md:text-base group-hover:text-[#3BA9F4] transition-colors">TailwindCSS</h1>
-            <span className="text-2xl text-[#38bdf8]"><SiTailwindcss /></span>
-          </div>
-
-          <div className={stackItemClass}>
-            <h1 className="text-xs md:text-base group-hover:text-[#3BA9F4] transition-colors">Javascript</h1>
-            <span className="text-2xl text-[#f7df1e]"><FaJs /></span>
-          </div>
-
-          <div className={stackItemClass}>
-            <h1 className="text-xs md:text-base group-hover:text-[#3BA9F4] transition-colors">NodeJS</h1>
-            <span className="text-2xl text-[#68a063]"><IoLogoNodejs /></span>
-          </div>
-
-
-          <div className={stackItemClass}>
-            <h1 className="text-xs md:text-base group-hover:text-[#3BA9F4] transition-colors">ReactJS</h1>
-            <span className="text-2xl text-[#61dafb]"><FaReact /></span>
-          </div>
-
-
-          <div className={stackItemClass}>
-            <h1 className="text-xs md:text-base group-hover:text-[#3BA9F4] transition-colors">NextJS</h1>
-            <span className="text-2xl text-white"><RiNextjsFill /></span>
-          </div>
-
-
-          <div className={stackItemClass}>
-            <h1 className="text-xs md:text-base group-hover:text-[#3BA9F4] transition-colors">PHP</h1>
-            <span className="text-2xl text-[#777bb4]"><FaPhp /></span>
-          </div>
-
-          <div className={stackItemClass}>
-            <h1 className="text-xs md:text-base group-hover:text-[#3BA9F4] transition-colors">Laravel</h1>
-            <span className="text-2xl text-[#ff2d20]"><FaLaravel /></span>
-          </div>
-
-          <div className={stackItemClass}>
-            <h1 className="text-xs md:text-base group-hover:text-[#3BA9F4] transition-colors">Livewire</h1>
-            <span className="text-2xl text-[#fb70a9]"><SiLivewire /></span>
-          </div>
-
-          <div className={stackItemClass}>
-            <h1 className="text-xs md:text-base group-hover:text-[#3BA9F4] transition-colors">MySQL</h1>
-            <span className="text-2xl text-[#00758f]"><DiMysql /></span>
-          </div>
-
-
-          <div className={stackItemClass}>
-            <h1 className="text-xs md:text-base group-hover:text-[#3BA9F4] transition-colors">Git</h1>
-            <span className="text-2xl text-[#f1502f]"><FaGitAlt /></span>
-          </div>
-
-
-          <div className={stackItemClass}>
-            <h1 className="text-xs md:text-base group-hover:text-[#3BA9F4] transition-colors">Linux</h1>
-            <span className="text-2xl text-white"><SiLinux /></span>
-          </div>
-
-
-          <div className={stackItemClass}>
-            <h1 className="text-xs md:text-base group-hover:text-[#3BA9F4] transition-colors">Docker</h1>
-            <span className="text-2xl text-[#2496ed]"><DiDocker /></span>
-          </div>
-
-
-          <div className={stackItemClass}>
-            <h1 className="text-xs md:text-base group-hover:text-[#3BA9F4] transition-colors">ReactNative</h1>
-            <span className="text-2xl text-[#61dafb]"><TbBrandReactNative /></span>
-          </div>
-
-          <div className={stackItemClass}>
-            <h1 className="text-xs md:text-base group-hover:text-[#3BA9F4] transition-colors">OpenAI</h1>
-            <span className="text-2xl text-white"><SiOpenai /></span>
-          </div>
-
-          <div className={stackItemClass}>
-            <h1 className="text-xs md:text-base group-hover:text-[#3BA9F4] transition-colors">Express</h1>
-            <span className="text-2xl text-gray-300"><SiExpress /></span>
-          </div>
-
-          <div className={stackItemClass}>
-            <h1 className="text-xs md:text-base group-hover:text-[#3BA9F4] transition-colors">PostgreSQL</h1>
-            <span className="text-2xl text-[#336791]"><SiPostgresql /></span>
-          </div>
-
-          <div className={stackItemClass}>
-            <h1 className="text-xs md:text-base group-hover:text-[#3BA9F4] transition-colors">MongoDB</h1>
-            <span className="text-2xl text-[#47A248]"><SiMongodb /></span>
-          </div>
-
-          <div className={stackItemClass}>
-            <h1 className="text-xs md:text-base group-hover:text-[#3BA9F4] transition-colors">Prisma</h1>
-            <span className="text-2xl text-white"><SiPrisma /></span>
-          </div>
-
-
-
-        </div>
+            <ul className="grid grid-cols-2 gap-3 text-center sm:gap-4 md:gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+              {grupo.itens.map((item) => (
+                <li key={item.name} className={stackItemClass}>
+                  <span className="text-xs md:text-base group-hover:text-[#3BA9F4] transition-colors">
+                    {item.name}
+                  </span>
+                  <span aria-hidden="true" className="text-2xl" style={{ color: item.color }}>
+                    {item.icon}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        ))}
       </div>
-    </main>
+    </section>
   );
 }

@@ -13,13 +13,13 @@ const experiences = [
     {
         id: 1,
         role: "Desenvolvedor mobile React Native",
-        company: "Doe +",
-        period: "2025 - 2025",
+        company: "Doe+ (voluntário)",
+        period: "2025 - Atualmente",
         description: "Atuei no desenvolvimento e manutenção de aplicações mobile com React Native. Liderei a equipe de desenvolvimento, organizei tarefas, apoiei decisões técnicas e garanti boas práticas de código. Trabalhei com integração de APIs, correção de bugs, melhorias de performance e foco em UX, utilizando Git e fluxo de trabalho colaborativo.",
     },
     {
         id: 2,
-        role: "Suporte Tecnico",
+        role: "Suporte Técnico",
         company: "AIAtende",
         period: "Nov-2025 - Dez-2025",
         description: "Atendimento e suporte técnico no CRM Kommo. Configuração de fluxos, usuários e automações. Resolução de problemas operacionais e técnicos. Apoio às equipes no uso correto da plataforma.",
@@ -29,11 +29,17 @@ const experiences = [
         id: 3,
         role: "Desenvolvedor Full Stack",
         company: "AIAtende",
-        period: "Atualmente",
+        period: "Jan-2026 - Jul-2026",
         description: "Desenvolvimento e evolução de agentes de IA. Implementação de lógicas, testes e ajustes de automações. Integração de sistemas e otimização de fluxos de atendimento. Melhoria contínua da experiência do usuário e performance dos agentes.",
     },
 
-
+    {
+        id: 4,
+        role: "Suporte Técnico de TI",
+        company: "Brasil Sat",
+        period: "Jul-2026 - Atualmente",
+        description: "Atuo no suporte técnico de TI, atendendo demandas operacionais e de infraestrutura. Além do suporte, desenvolvo landing pages e participo ativamente da manutenção e evolução do código do sistema interno.",
+    },
 
     // Adicione mais experiências aqui
 ];
@@ -47,6 +53,7 @@ export default function Experiences() {
                         initial={{ opacity: 0, y: -20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
+                        viewport={{ once: true }}
                         className="mb-4 text-3xl font-bold text-[#F2F9FC] md:text-4xl"
                     >
                         Minhas Experiências
@@ -64,7 +71,7 @@ export default function Experiences() {
                     <div className="absolute top-0 bottom-0 left-4 md:left-1/2 w-0.5 bg-[#1f1f1f] transform -translate-x-1/2 md:-translate-x-1/2"></div>
 
                     <div className="flex flex-col w-full gap-8 md:gap-12">
-                        {experiences.map((exp, index) => (
+                        {[...experiences].reverse().map((exp, index) => (
                             <motion.div
                                 key={exp.id}
                                 initial={{ opacity: 0, y: 50 }}
@@ -79,24 +86,29 @@ export default function Experiences() {
 
                                 {/* Ponto central na linha do tempo */}
                                 <div className="absolute left-4 md:left-1/2 w-6 h-6 md:w-8 md:h-8 rounded-full bg-[#0a0a0a] border-[3px] md:border-4 border-[#3BA9F4] z-10 transform -translate-x-1/2 flex items-center justify-center">
-                                    <FaBriefcase className="text-[10px] md:text-xs text-[#3BA9F4]" />
+                                    <FaBriefcase className="text-xs text-[#3BA9F4]" />
                                 </div>
 
                                 {/* Card de conteúdo */}
                                 <div className="w-full pl-10 md:w-5/12 md:pl-0">
-                                    <div className="flex flex-col p-4 md:p-6 transition-all duration-300 border rounded-lg shadow-lg bg-[#0a0a0a] border-[#1f1f1f] hover:border-[#3BA9F4] hover:shadow-[#3BA9F4]/10 group">
+                                    <div className="flex flex-col p-4 md:p-6 transition-all duration-300 border rounded-lg bg-[#0a0a0a] border-[#1f1f1f] hover:border-[#3BA9F4] hover:shadow-[0_0_15px_rgba(59,169,244,0.15)] group">
                                         <h3 className="mb-1 text-base md:text-xl font-bold text-[#F2F9FC] group-hover:text-[#3BA9F4] transition-colors">{exp.role}</h3>
                                         <h4 className="mb-3 md:mb-4 text-sm md:text-lg font-medium text-gray-400">{exp.company}</h4>
 
-                                        <div className="flex items-center gap-2 mb-3 md:mb-4 text-xs md:text-sm text-[#3BA9F4] font-semibold">
-                                            <FaCalendarAlt />
+                                        <div className="flex flex-wrap items-center gap-2 mb-3 md:mb-4 text-xs md:text-sm text-[#3BA9F4] font-semibold">
+                                            <FaCalendarAlt aria-hidden="true" />
                                             <span>{exp.period}</span>
+                                            {exp.period.includes("Atualmente") && (
+                                                <span className="inline-flex items-center gap-1.5 px-2 py-0.5 text-xs font-bold tracking-wider uppercase border rounded border-green-500/50 text-green-400">
+                                                    <span className="w-1.5 h-1.5 rounded-full bg-green-500" aria-hidden="true" />
+                                                    Atual
+                                                </span>
+                                            )}
                                         </div>
 
-                                        <p
-                                            className="text-sm md:text-base leading-relaxed text-gray-300"
-                                            dangerouslySetInnerHTML={{ __html: exp.description }}
-                                        />
+                                        <p className="text-sm md:text-base leading-relaxed text-gray-300">
+                                            {exp.description}
+                                        </p>
                                     </div>
                                 </div>
                             </motion.div>

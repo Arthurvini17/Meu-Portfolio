@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Poppins, Outfit } from "next/font/google";
 import { motion } from "motion/react";
 import { BsCodeSlash } from "react-icons/bs";
+import { IoLogoWhatsapp } from "react-icons/io5";
 
 const poppins = Poppins({
     weight: ["300", "400", "500", "600", "700"],
@@ -36,7 +37,7 @@ export default function Hero() {
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                             <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
                         </span>
-                        <span className="text-sm font-medium text-gray-300 tracking-wide uppercase">Disponível para Oportunidades</span>
+                        <span className="text-sm font-medium text-gray-300 tracking-wide uppercase">Disponível para Projetos e Freelas</span>
                     </motion.div>
 
                     {/* Title Section */}
@@ -67,14 +68,25 @@ export default function Hero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.5 }}
-                        className="mb-16"
+                        className="flex flex-col items-center gap-4 mb-16 sm:flex-row"
                     >
                         <Link href="#projects" className="group">
                             <button className="flex items-center justify-center gap-3 px-10 py-4 text-sm md:text-base font-bold text-white bg-gradient-to-r from-[#8b5cf6] to-[#6366f1] rounded-full hover:opacity-90 transition-all transform hover:scale-105 shadow-[0_0_40px_rgba(139,92,246,0.2)] border border-white/10">
-                                <BsCodeSlash size={18} />
+                                <BsCodeSlash size={18} aria-hidden="true" />
                                 Ver Meus Projetos
                             </button>
                         </Link>
+
+                        {/* A conversão precisa existir acima da dobra, não só no header */}
+                        <a
+                            href={`https://wa.me/5581988548132?text=${encodeURIComponent("Olá, Arthur! Vim pelo seu portfólio.")}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center justify-center gap-3 px-10 py-4 text-sm md:text-base font-bold text-[#F2F9FC] transition-colors border rounded-full border-[#3BA9F4] hover:bg-[#3BA9F4]/10"
+                        >
+                            <IoLogoWhatsapp size={18} aria-hidden="true" />
+                            Falar comigo
+                        </a>
                     </motion.div>
 
                     {/* Stats Section */}
@@ -86,15 +98,15 @@ export default function Hero() {
                     >
                         <div className="flex flex-col items-center">
                             <span className="text-3xl md:text-4xl font-bold text-white mb-2">15+</span>
-                            <span className="text-xs md:text-sm text-gray-500 uppercase tracking-widest font-medium">Projetos Feitos</span>
+                            <span className="text-xs md:text-sm text-gray-400 uppercase tracking-widest font-medium">Projetos Feitos</span>
                         </div>
                         <div className="flex flex-col items-center">
                             <span className="text-3xl md:text-4xl font-bold text-white mb-2">4+</span>
-                            <span className="text-xs md:text-sm text-gray-500 uppercase tracking-widest font-medium">Linguagens Core</span>
+                            <span className="text-xs md:text-sm text-gray-400 uppercase tracking-widest font-medium">Linguagens Core</span>
                         </div>
                         <div className="flex flex-col items-center">
                             <span className="text-3xl md:text-4xl font-bold text-white mb-2">100%</span>
-                            <span className="text-xs md:text-sm text-gray-500 uppercase tracking-widest font-medium">Qualidade</span>
+                            <span className="text-xs md:text-sm text-gray-400 uppercase tracking-widest font-medium">Qualidade</span>
                         </div>
                     </motion.div>
 
