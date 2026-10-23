@@ -14,7 +14,7 @@ const experiences = [
         id: 1,
         role: "Desenvolvedor mobile React Native",
         company: "Doe+ (voluntário)",
-        period: "2025 - Atualmente",
+        period: "2025 - Jul-2026",
         description: "Atuei no desenvolvimento e manutenção de aplicações mobile com React Native. Liderei a equipe de desenvolvimento, organizei tarefas, apoiei decisões técnicas e garanti boas práticas de código. Trabalhei com integração de APIs, correção de bugs, melhorias de performance e foco em UX, utilizando Git e fluxo de trabalho colaborativo.",
     },
     {
