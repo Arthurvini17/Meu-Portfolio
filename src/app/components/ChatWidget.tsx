@@ -18,6 +18,9 @@ export default function ChatWidget() {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const summarySentRef = useRef(false);
   const inactivityTimerRef = useRef<NodeJS.Timeout | null>(null);
+  // Ref para evitar closure stale no timer de inatividade
+  const messagesRef = useRef(messages);
+  useEffect(() => { messagesRef.current = messages; }, [messages]);
 
   // A seção de contato abre a Nina por evento, sem estado compartilhado.
   useEffect(() => {
@@ -34,20 +37,21 @@ export default function ChatWidget() {
   }, [messages]);
 
   const sendSummary = useCallback(async () => {
-    if (summarySentRef.current || messages.length < 2) return;
+    const currentMessages = messagesRef.current;
+    if (summarySentRef.current || currentMessages.length < 2) return;
     summarySentRef.current = true;
 
     try {
       await fetch('/api/chat/summary', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ messages }),
+        body: JSON.stringify({ messages: currentMessages }),
       });
     } catch (err) {
       console.error('Erro ao enviar resumo:', err);
       summarySentRef.current = false;
     }
-  }, [messages]);
+  }, []); // sem dependência — usa messagesRef para evitar closure stale
 
   // Reseta o timer de inatividade (2 minutos) a cada nova mensagem
   useEffect(() => {
@@ -67,6 +71,8 @@ export default function ChatWidget() {
   const handleCloseChat = () => {
     setIsOpen(false);
     sendSummary();
+    // Permite novo envio se o visitante reabrir o chat na mesma sessão
+    setTimeout(() => { summarySentRef.current = false; }, 500);
   };
 
   return (
